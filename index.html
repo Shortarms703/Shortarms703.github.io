@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <title>Website UI Survey</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -14,6 +16,11 @@
   <section id="website-info">
     <h2>Website Information and Screenshots</h2>
     <p>Visit the website: <a href="https://nike.com" target="_blank">nike.com</a></p>
+    <a href="https://nike.com" target="_blank">
+      <img src="images/Screenshot 2024-01-16 at 12.37.57 PM.png">
+    </a>
+    <br>
+    <img src="images/Screenshot 2024-01-16 at 12.38.57 PM.png">
   </section>
 
   <form action="#" method="post" id="survey-form">
@@ -39,7 +46,44 @@
       <textarea id="Q2_comments" name="Q2_comments" rows="4" placeholder="Your comments here"></textarea>
     </div>
 
-    
+    <div class="question">
+      <label>4. How user-friendly is the navigation?</label>
+      <select name="navigation-rating">
+        <option value="select">Select</option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="average">Average</option>
+        <option value="poor">Poor</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label>5. Which features do you find the least useful on the website? (Select all that apply)</label><br>
+      <input type="checkbox" id="feature-1" name="features" value="feature-1">
+      <label for="feature-1">Shop All New Arrivals Option</label><br>
+      <input type="checkbox" id="feature-2" name="features" value="feature-2">
+      <label for="feature-2">Favourites Section</label><br>
+      <input type="checkbox" id="feature-3" name="features" value="feature-3">
+      <label for="feature-3">Latest and Greatest Shopping Section</label><br>
+    </div>
+
+    <div class="question">
+      <label for="comments">6. Any additional comments or suggestions?</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Your comments here"></textarea>
+    </div>
+
+
+    <div class="question">
+      <label>7. How likely are you to recommend this website to others?</label><br>
+      <input type="radio" id="recommend-likely" name="recommend" value="likely">
+      <label for="recommend-likely">Likely</label><br>
+      <input type="radio" id="recommend-neutral" name="recommend" value="neutral">
+      <label for="recommend-neutral">Neutral</label><br>
+      <input type="radio" id="recommend-unlikely" name="recommend" value="unlikely">
+      <label for="recommend-unlikely">Unlikely</label><br>
+    </div>
+
+    <button type="submit">Submit Survey</button>
   </form>
 
   <footer>
