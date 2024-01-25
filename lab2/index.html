@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <p>Tell us a bit about you.</p>
+	Choose a Category:
+	<input type="checkbox" id="vegetarian" name="dietaryPreference" value="Vegetarian">
+  <label for="vegetarian">Vegetarian</label>
+  <input type="checkbox" id="glutenFree" name="dietaryPreference" value="GlutenFree">
+  <label for="glutenFree">GlutenFree</label>
+  <input type="checkbox" id="organic" name="dietaryPreference" value="Organic">
+  <label for="organic">Organic</label>
+  <input type="checkbox" id="nonOrganic" name="dietaryPreference" value="Not Organic">
+  <label for="nonOrganic">Not Organic</label>
+</div>
+
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your restrictions.</p>
+	 Choose items to buy:
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems(); openInfo(event, 'Cart')">
+		Add selected items to cart.
+	</button>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+</div>
+<footer style="padding-top: 300px">
+  <p>Website designed by Tess Harper, Joshua Rostenne, and Carter Craggs</p>
+</footer>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>

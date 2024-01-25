@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website UI Survey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Just Do It or ... Just Don't</h1>
+  </header>
+  
+  <section id="website-info">
+    <h2>Website Information and Screenshots</h2>
+    <p>Visit the website: <a href="https://nike.com" target="_blank">nike.com</a></p>
+    <a href="https://nike.com" target="_blank">
+      <img src="static/Screenshot%202024-01-16%20at%2012.37.57%E2%80%AFPM.png">
+    </a>
+    <br>
+    <img src="static/Screenshot%202024-01-16%20at%2012.38.57%E2%80%AFPM.png">
+  </section>
+
+  <form action="#" method="post" id="survey-form">
+    <h2>Survey Questions</h2>
+
+    <div class="question">
+      <label for="text-question">1. What do you think about the overall design of the website?</label>
+      <textarea id="text-question" name="text-question" rows="4" placeholder="Your answer here"></textarea>
+    </div>
+
+    <div class="question">
+      <label>2. How would you rate the website's color scheme?</label><br>
+      <input type="radio" id="color-good" name="color-scheme" value="good">
+      <label for="color-good">Good</label><br>
+      <input type="radio" id="color-okay" name="color-scheme" value="okay">
+      <label for="color-okay">Okay</label><br>
+      <input type="radio" id="color-poor" name="color-scheme" value="poor">
+      <label for="color-poor">Poor</label>
+    </div>
+
+    <div class="question">
+      <label for="comments">3. Explain what you liked or disliked based on your anwser in question 2?</label>
+      <textarea id="Q2_comments" name="Q2_comments" rows="4" placeholder="Your comments here"></textarea>
+    </div>
+
+    <div class="question">
+      <label>4. How user-friendly is the navigation?</label>
+      <select name="navigation-rating">
+        <option value="select">Select</option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="average">Average</option>
+        <option value="poor">Poor</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label>5. Which features do you find the least useful on the website? (Select all that apply)</label><br>
+      <input type="checkbox" id="feature-1" name="features" value="feature-1">
+      <label for="feature-1">Shop All New Arrivals Option</label><br>
+      <input type="checkbox" id="feature-2" name="features" value="feature-2">
+      <label for="feature-2">Favourites Section</label><br>
+      <input type="checkbox" id="feature-3" name="features" value="feature-3">
+      <label for="feature-3">Latest and Greatest Shopping Section</label><br>
+    </div>
+
+    <div class="question">
+      <label for="comments">6. Any additional comments or suggestions?</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Your comments here"></textarea>
+    </div>
+
+
+    <div class="question">
+      <label>7. How likely are you to recommend this website to others?</label><br>
+      <input type="radio" id="recommend-likely" name="recommend" value="likely">
+      <label for="recommend-likely">Likely</label><br>
+      <input type="radio" id="recommend-neutral" name="recommend" value="neutral">
+      <label for="recommend-neutral">Neutral</label><br>
+      <input type="radio" id="recommend-unlikely" name="recommend" value="unlikely">
+      <label for="recommend-unlikely">Unlikely</label><br>
+    </div>
+
+    <button type="submit">Submit Survey</button>
+  </form>
+
+  <footer>
+    <p>Website designed by Tess Harper, Joshua Rostenne, and Carter Craggs</p>
+  </footer>
+</body>
+</html>
