@@ -4,12 +4,26 @@ document.addEventListener("DOMContentLoaded", function () {
     var glutenFreeCheckbox = document.getElementById("glutenFree");
     var organicCheckbox = document.getElementById("organic");
     var nonOrganicCheckbox = document.getElementById("nonOrganic");
+    var vegetablesCheckbox = document.getElementById("vegetables");
+    var fruitsCheckbox = document.getElementById("fruits");
+    var meatsCheckbox = document.getElementById("meats");
+    var desertsCheckbox = document.getElementById("deserts");
+    var seafoodCheckbox = document.getElementById("seafood");
+    var dairyCheckbox = document.getElementById("dairy");
+
+
 
     // Add event listeners to the checkboxes
     vegetarianCheckbox.addEventListener("change", updateProductList);
     glutenFreeCheckbox.addEventListener("change", updateProductList);
     organicCheckbox.addEventListener("change", updateProductList);
     nonOrganicCheckbox.addEventListener("change", updateProductList);
+    vegetablesCheckbox.addEventListener("change", updateProductList);
+    fruitsCheckbox.addEventListener("change", updateProductList);
+    meatsCheckbox.addEventListener("change", updateProductList);
+    desertsCheckbox.addEventListener("change", updateProductList);
+    seafoodCheckbox.addEventListener("change", updateProductList);
+    dairyCheckbox.addEventListener("change", updateProductList);
 
     // Function to call when any of the checkboxes are clicked
     function updateProductList() {
@@ -18,7 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+
 populateListProductChoices("displayProduct");
+
+openInfo(event, 'Client')
 
 // This function is called when any of the tab is clicked
 // It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
@@ -51,6 +68,13 @@ function populateListProductChoices(slct2) {
     var glutenFreeCheckbox = document.getElementById("glutenFree");
     var organicCheckbox = document.getElementById("organic");
     var nonOrganicCheckbox = document.getElementById("nonOrganic");
+    var vegetablesCheckbox = document.getElementById("vegetables");
+    var fruitsCheckbox = document.getElementById("fruits");
+    var meatsCheckbox = document.getElementById("meats");
+    var desertsCheckbox = document.getElementById("deserts");
+    var seafoodCheckbox = document.getElementById("seafood");
+    var dairyCheckbox = document.getElementById("dairy");
+
 
     var s2 = document.getElementById(slct2);
 
@@ -62,7 +86,13 @@ function populateListProductChoices(slct2) {
     var glutenFree = glutenFreeCheckbox.checked;
     var organic = organicCheckbox.checked;
     var nonOrganic = nonOrganicCheckbox.checked;
-    var optionArray = restrictListProducts(products, vegetarian, glutenFree, organic, nonOrganic);
+    var vegetables = vegetablesCheckbox.checked;
+    var fruits = fruitsCheckbox.checked;
+    var meats = meatsCheckbox.checked;
+    var deserts = desertsCheckbox.checked;
+    var seafood = seafoodCheckbox.checked;
+    var dairy = dairyCheckbox.checked;
+    var optionArray = restrictListProducts(products, vegetarian, glutenFree, organic, nonOrganic, vegetables, fruits, dairy, meats, seafood, deserts);
 
     // sort the products by price before displaying
     optionArray.sort(function (a, b) {
@@ -187,6 +217,7 @@ function selectedItems() {
     for (i = 0; i < ele.length; i++) {
         if (ele[i].checked) {
             para.appendChild(document.createTextNode(ele[i].value));
+            para.innerHTML = para.innerHTML + " " + products.find(product => product.name === ele[i].value).price + "$";
             para.appendChild(document.createElement("br"));
             chosenProducts.push(ele[i].value);
         }

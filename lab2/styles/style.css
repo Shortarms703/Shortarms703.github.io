@@ -40,3 +40,155 @@ body {
   border: 1px solid #ccc;
   border-top: none;
 }
+
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+      .tab {
+          background-color: #3498db;
+          overflow: hidden;
+      }
+
+      .tab button {
+          background-color: #e67e22;
+          color: white;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: background-color 0.3s;
+      }
+
+      .tab button:hover {
+          background-color: #e67e22;
+      }
+
+      .tabcontent {
+          display: none;
+          padding: 20px;
+          border: 1px solid #ccc;
+          background-color: #fff;
+          border-radius: 8px;
+          margin-top: 20px;
+      }
+
+      input[type="checkbox"] {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          width: 20px;
+          height: 20px;
+          background-color: #80858a;
+          border-radius: 50%;
+          display: inline-block;
+          position: relative;
+          vertical-align: middle;
+          cursor: pointer;
+          margin-right: 5px;
+      }
+
+      input[type="checkbox"]:checked {
+          background-color: #1e8dcb;
+      }
+
+      label {
+          display: inline-block;
+          vertical-align: middle;
+      }
+
+      hr {
+          border: 1px solid #ccc;
+          margin-top: 20px;
+      }
+
+      button.block {
+          display: block;
+          font-size: 0.7em;
+          padding: 10px;
+          background-color: #3498db;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 20px;
+      }
+
+      button.block:hover {
+          background-color: #e67e22;
+      }
+
+      .breadcrumbs {
+          background-color: #3498db;
+          overflow: hidden;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+      }
+
+      .breadcrumbs li {
+          float: left;
+          margin-right: 10px;
+      }
+
+      .breadcrumbs li a {
+          display: block;
+          padding: 10px;
+          color: white;
+          text-decoration: none;
+          transition: background-color 0.3s;
+      }
+
+      .breadcrumbs li a:hover {
+          background-color: #e67e22;
+      }
+
+.sidebar {
+  position: fixed;
+  top: 200px;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  background-color: #104162;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #e67e22;
+}
+
+.content {
+  margin-left: 200px; /* Adjust this value to match the width of your sidebar */
+  padding-left: 16px;
+}
+
+footer {
+  margin-top: auto;
+  padding-top: 20px; /* Add padding to the top of the footer to avoid overlap with the sidebar */
+}

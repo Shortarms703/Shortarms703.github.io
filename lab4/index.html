@@ -1,0 +1,172 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Module 4 - Labo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+<!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+<!-- Should show the name of your company with an image or logo -->
+<!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+<!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+<!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+<div class="container-md p-3 m-0 border bg-dark text-white">
+    <div class="row">
+        <div class="col-auto">
+            <img class="rounded" src="images/published.jpg" height="100" width="100" alt="girl with fancy hairstyle"/>
+        </div>
+        <div class="col">
+            <h1>Nice Scissors</h1>
+            <p>We'll take care of your hair!</p>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
+<!-- It can be useful for placement of information -->
+<div class="row p-3">
+    <div class="col-sm-3"><a href="#service_description">Services</a></div>
+    <div class="col-sm-3"><a href="#staff">Our Staff</a></div>
+    <div class="col-sm-3"><a href="#appointment">Make an appointment</a></div>
+    <div class="col-sm-3">Where to find us</div>
+</div>
+
+
+<!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+<!-- Might be (or not) useful to show some information to the user -->
+<div class="container">
+    <h2 id="service_description">Services</h2>
+    <table class="table table-info table-hover">
+        <thead>
+        <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Haircut</td>
+            <td>A basic haircut including wash and style.</td>
+            <td>$20</td>
+        </tr>
+        <tr>
+            <td>Drying</td>
+            <td>A professional drying service to style your hair.</td>
+            <td>$10</td>
+        </tr>
+        <tr>
+            <td>Coloring</td>
+            <td>Choose from a variety of hair coloring options.</td>
+            <td>$50</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container" id="staff">
+    <h2>Our Staff</h2>
+    <table class="table table-secondary table-hover">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Specialty</th>
+            <th>Years of experience</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Jules</td>
+            <td>Curly hair</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Marie</td>
+            <td>Coloring</td>
+            <td>5</td>
+        </tr>
+        <tbody>
+    </table>
+</div>
+
+
+<!-- Collapsible with multiple items - accordion -->
+<!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+<!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+<!-- could work well.  You can use other patterns too.  This is just an example. -->
+<div class="container" id="appointment">
+    <h2>
+        Make an appointment
+    </h2>
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+            </div>
+            <div id="collapseService" class="collapse show" data-parent="#accordion">
+                <div class="card-body">
+                    <p>Here is our list of services</p>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Choose a service</option>
+                        <option value="1">Haircut</option>
+                        <option value="2">Drying</option>
+                        <option value="3">Coloring</option>
+                    </select>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date and time</a>
+                </div>
+                <div id="collapseDate" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <!-- Bootstrap has various input components. Some examples are given here: -->
+                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                        <div class="form-group">
+                            <label for="dateTimeInput" class="col-form-label">Select the date and time of your appointment below:</label>
+                            <div class="">
+                                <input class="form-control" type="datetime-local" value=""
+                                       id="dateTimeInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+                </div>
+                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Your information so we can contact you</p>
+                        <p>Form to enter name, email, phone</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
