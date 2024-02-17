@@ -1,0 +1,48 @@
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+/* Bootstrap default font-family is Helvetica Neue */
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    /*text-shadow: 3px 3px 1px black;*/
+    font-weight: bold;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+input {
+    margin-bottom: 10px
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+div.col-auto {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+div.col-auto img {
+    margin: 10px;
+}
+
+button img {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px
+}
+
+input:focus {
+    background-color: #c8d9f5;
+}
